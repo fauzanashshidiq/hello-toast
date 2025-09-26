@@ -7,4 +7,6 @@
     <string name="text_header">Halaman ke-2</string>
     <string name="button_label_pindah">Switch Page</string>
     <string name="button_label_browser">Browse Page</string>
+    <string name="button_label_contact">Contacts Page</string>
+    <string name="button_label_location">Location Page</string>
 </resources>
