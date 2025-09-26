@@ -4,4 +4,6 @@
     <string name="count_initial_value">0</string>
     <string name="button_label_toast">Toast</string>
     <string name="toast_message">Hello Toast !</string>
+    <string name="text_header">Halaman ke-2</string>
+    <string name="button_label_pindah">Switch Page</string>
 </resources>
