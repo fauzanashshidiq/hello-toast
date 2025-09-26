@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -14,7 +13,7 @@
 
     <Button
         android:id="@+id/button_toast"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#043873"
         android:text="@string/button_label_toast"
@@ -28,14 +27,18 @@
         android:background="#FFFF00"
         android:gravity="center"
         android:text="@string/count_initial_value"
-        android:textSize="160sp" />
+        android:textSize="160sp"
+        android:layout_below="@id/button_toast"
+        android:layout_marginTop="30dp"/>
 
     <Button
         android:id="@+id/button_count"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#043873"
         android:text="@string/button_label_count"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@id/button_toast"/>
 
-</LinearLayout>
+</RelativeLayout>
