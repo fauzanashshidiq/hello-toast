@@ -1,6 +1,7 @@
 package com.example.hellotoast
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val buttonCountUp = findViewById<Button>(R.id.button_count)
         val buttonToast = findViewById<Button>(R.id.button_toast)
         val buttonSwitchPage = findViewById<Button>(R.id.button_switchpage)
+        val buttonBrowser = findViewById<Button>(R.id.button_browser)
 
         buttonCountUp.setOnClickListener(View.OnClickListener{
             mCount++
@@ -35,6 +37,11 @@ class MainActivity : AppCompatActivity() {
         buttonSwitchPage.setOnClickListener(View.OnClickListener{
             val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
+        })
+        buttonBrowser.setOnClickListener({
+            val intentbrowse = Intent(Intent.ACTION_VIEW)
+            intentbrowse.setData(Uri.parse("https://www.google.com"))
+            startActivity(intentbrowse)
         })
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
